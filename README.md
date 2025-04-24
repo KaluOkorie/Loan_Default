@@ -66,7 +66,9 @@ Model training and evaluation
 Model deployment using Streamlit
 
 ## Study Outcomes and Conclusions
+
 <img width="671" alt="Demographic_default_trend" src="https://github.com/user-attachments/assets/42b67172-ff44-44dc-a615-df9224398e59" />
+
 **1. Demographic Insights:** The study found that, demographically, **females** in younger and middle age groups tend to have a lower loan default rate compared to males. This may be attributed to females generally being supported by their parents, partners, or making more cautious financial decisions. However, as females age, they often begin supporting their families more heavily, which may impact their financial stability and lead to a higher likelihood of default. In contrast, **males** tend to start striving for financial independence earlier, often with little support. If their investments or business ventures succeed, they are able to repay the loan. which often happens due to youthful exuberance or premature understanding of financial systems the risk of default increases. As males grow older, they tend to focus more on personal financial security for the family rather than family immediate support.
 
 <img width="1090" alt="Features_to_consider_before_granting_Loan" src="https://github.com/user-attachments/assets/6a6946fe-5fe1-4018-8a49-9d8d58aac397" />
