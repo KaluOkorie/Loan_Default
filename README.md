@@ -41,8 +41,10 @@ the **Random Forest model** was selected for deployment.
 
 # Deployment of the Loan_Default_Prediction App
 The selected model (Random Forest Classifier) was retrained with five features carved from its inbuilt feature importance and deployed using Streamlit Cloud.
-
 **Check the live deployment:**  
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://loandefaultpredict.streamlit.app/)
+
 [![Loan Default Prediction Demo](demo.gif)](https://loandefaultpredict.streamlit.app/)  
 *(Click 👉 [here](https://loandefaultpredict.streamlit.app/) to try the app!)*
 
