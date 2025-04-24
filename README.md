@@ -39,8 +39,7 @@ Based on accuracy scores and visual comparisons:
 accuracies = [acc_dt, acc_rf, acc_knn]
 the **Random Forest model** was selected for deployment.
 
-# Deployment of the Loan_Default_Prediction Algorithm
-
+# Deployment of the Loan_Default_Prediction App
 The selected model (Random Forest Classifier) was retrained with five features carved from its inbuilt feature importance and deployed using Streamlit Cloud.
 
 **Check the live deployment:**  
