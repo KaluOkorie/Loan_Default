@@ -39,31 +39,13 @@ Based on accuracy scores and visual comparisons:
 accuracies = [acc_dt, acc_rf, acc_knn]
 the **Random Forest model** was selected for deployment.
 
-# Deployment:
-
-## 🎯 Loan Default Prediction App
+# Deployment of the Loan_Default_Prediction Algorithm
 
 The selected model (Random Forest Classifier) was retrained with five features carved from its inbuilt feature importance and deployed using Streamlit Cloud.
 
-<p align="center">
-  <a href="https://loandefaultpredict.streamlit.app/" target="_blank">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2I1cnZib2ZkMndpZnJ5aDRqa2UxeW9nNTdwY3g4Zm02Mjdobmx6YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3ohhwn9cHEZ4WwQxIY/giphy.gif" alt="Streamlit App Demo" width="600"/>
-  </a>
-</p>
-
-👉 To check the deployment, click [HERE](https://loandefaultpredict.streamlit.app/)
-
-
-
-# Loan Default Prediction Project
-
-The selected model (Random Forest Classifier) was retrained with **five features** curated from its built-in feature importance analysis and deployed using Streamlit Cloud.
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://loandefaultpredict.streamlit.app/)
-
 **Check the live deployment:**  
 [![Loan Default Prediction Demo](demo.gif)](https://loandefaultpredict.streamlit.app/)  
-*(Click the GIF or [here](https://loandefaultpredict.streamlit.app/) to try the app!)*
+*(Click 👉 [here](https://loandefaultpredict.streamlit.app/) to try the app!)*
 
 
 ## Tech Stack
