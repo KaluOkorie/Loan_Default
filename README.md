@@ -55,6 +55,17 @@ The selected model (Random Forest Classifier) was retrained with five features c
 
 
 
+# Loan Default Prediction Project
+
+The selected model (Random Forest Classifier) was retrained with **five features** curated from its built-in feature importance analysis and deployed using Streamlit Cloud.
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://loandefaultpredict.streamlit.app/)
+
+**Check the live deployment:**  
+[![Loan Default Prediction Demo](demo.gif)](https://loandefaultpredict.streamlit.app/)  
+*(Click the GIF or [here](https://loandefaultpredict.streamlit.app/) to try the app!)*
+
+
 ## Tech Stack
 **Language:** Python
 
