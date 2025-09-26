@@ -23,37 +23,37 @@ I also discovered that medium credit amounts have the highest default rates - ch
 - The gap between cross-validation and test performance highlighted the importance of **robust validation strategies**
 
 ## Approach
-**Exploratory Data Analysis (EDA):**
-Performed a comprehensive analysis including missing data inspection, imputation, removal of irrelevant features, and visualisation of feature distributions to gain deeper insights into the dataset.
+## 🎯 Key Lessons Learned
+
+### Technical Insights:
+- **Random Forests** outperformed Decision Trees and K-NN because they handle feature interactions better in imbalanced datasets
+- **Feature selection** (using RFECV) proved more valuable than hyperparameter tuning alone
+- The gap between cross-validation and test performance highlighted the importance of **robust validation strategies**
+
+### Business Insights:
+- Medium loans (not large ones) carry the highest default risk
+- Demographic factors like age and gender show patterns, but must be interpreted carefully to avoid bias
+- Traditional credit assessment might be missing important non-linear relationships in the data
+
+## 📊 What's Inside
+
+### Data Pipeline:
 - **Ethical data handling** with sensitive demographic information
 - **Comprehensive EDA** with visualizations of outliers and distributions
 - **Smart feature engineering** removing redundant variables like telephone numbers
 - **Class imbalance handling** using Random OverSampling
+
+### Models Compared:
+- K-Nearest Neighbors (K-NN)
+- Decision Trees  
+- Random Forests (best performer)
+- Recursive Feature Elimination with Cross-Validation (RFECV)
+
+### Advanced Techniques:
+- Hyperparameter tuning with GridSearchCV
+- Stratified sampling for better validation
+- Feature importance analysis
   
-
-**Data Cleaning / Pre-processing:**
-Addressed class imbalance using RandomOverSampler, applied One-Hot Encoding to categorical features, and scaled numerical data for better model performance.
-
-**Feature Engineering:**
-Enhanced the dataset by creating synthetic feature combinations and selected optimal features using Recursive Feature Elimination with Cross-Validation (RFECV).
-
-**Standardization:**
-Normalised feature scales using StandardScaler to ensure consistency across models.
-
-**Modelling:**
-Built and compared three machine learning models:
-Random Forest
-K-Nearest Neighbors (KNN)
-Decision Tree
-
-**Hyperparameter Tuning:**
-Employed GridSearchCV to fine-tune model parameters for improved accuracy and robustness.
-
-**Final Model Selection:**
-Based on accuracy scores and visual comparisons:
-accuracies = [acc_dt, acc_rf, acc_knn]
-the **Random Forest model** was selected for deployment.
-
 ## Deployment of the Loan_Default_Prediction App
 The selected model (Random Forest Classifier) was retrained with five features carved from its inbuilt feature importance and deployed using Streamlit Cloud.
 **Check the live deployment:**  
@@ -94,14 +94,3 @@ Model deployment using Streamlit
 **1. Demographic Insights:** The study found that, demographically, **females** in younger and middle age groups tend to have a lower loan default rate compared to males. This may be attributed to females generally being supported by their parents, partners, or making more cautious financial decisions. However, as females age, they often begin supporting their families more heavily, which may impact their financial stability and lead to a higher likelihood of default. In contrast, **males** tend to start striving for financial independence earlier, often with little support. If their investments or business ventures succeed, they are able to repay the loan. which often happens due to youthful exuberance or premature understanding of financial systems the risk of default increases. As males grow older, they tend to focus more on personal financial security for the family rather than family immediate support.
 
 <img width="1090" alt="Features_to_consider_before_granting_Loan" src="https://github.com/user-attachments/assets/6a6946fe-5fe1-4018-8a49-9d8d58aac397" />
-
-### Models Compared:
-- K-Nearest Neighbors (K-NN)
-- Decision Trees  
-- Random Forests (best performer)
-- Recursive Feature Elimination with Cross-Validation (RFECV)
-
-### Advanced Techniques:
-- Hyperparameter tuning with GridSearchCV
-- Stratified sampling for better validation
-- Feature importance analysis
