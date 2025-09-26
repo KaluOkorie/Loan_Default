@@ -1,9 +1,8 @@
-# Loan_Default
-Banks deal with different types of risks, like credit risk, market risk, and Operational risk. This project is tasked with identifying the key factors influencing loan default
+# Identifying Key Factors Influencing Loan Default
 
-## Objectives 
-1. What attributes should credit providers consider to best predict and
-2. identify potential loan default?
+This project tackles a critical question in banking: **Beyond credit scores, what really predicts loan defaults?** While working with the South German Credit dataset, I discovered that traditional risk indicators don't always tell the full story.
+
+As someone passionate about making financial systems more equitable and efficient, I wanted to move beyond surface level analysis to understand the nuanced factors that truly influence repayment behavior.
 
 ## Dataset Overview
 The dataset used for this study is titled South German Credit [Dataset 2020], sourced from the UCI Machine Learning Repository [here](https://archive.ics.uci.edu/dataset/573/south+german+credit+update). It contains information on 1,000 loan applicants, each described by 21 features relevant to credit risk assessment. Notably, the dataset:
@@ -12,9 +11,25 @@ The dataset used for this study is titled South German Credit [Dataset 2020], so
 3. Contains German-language column names, which were translated to English for ease of analysis
   This dataset provides a solid foundation for building and evaluating machine learning models aimed at predicting loan default risk.
 
+## 💡 The Insight That Changed My Perspective
+
+The most surprising finding wasn't which model performed best, but **why** it performed best. Despite achieving 89% cross-validation accuracy, my models consistently dropped to around 71% on test data. This taught me a crucial lesson about the difference between theoretical accuracy and real-world reliability.
+
+I also discovered that medium credit amounts have the highest default rates - challenging the assumption that larger loans are inherently riskier. This suggests that risk assessment needs to consider not just the amount, but the purpose and context of the loan.
+
+### Technical Insights:
+- **Random Forests** outperformed Decision Trees and K-NN because they handle feature interactions better in imbalanced datasets
+- **Feature selection** (using RFECV) proved more valuable than hyperparameter tuning alone
+- The gap between cross-validation and test performance highlighted the importance of **robust validation strategies**
+
 ## Approach
 **Exploratory Data Analysis (EDA):**
 Performed a comprehensive analysis including missing data inspection, imputation, removal of irrelevant features, and visualisation of feature distributions to gain deeper insights into the dataset.
+- **Ethical data handling** with sensitive demographic information
+- **Comprehensive EDA** with visualizations of outliers and distributions
+- **Smart feature engineering** removing redundant variables like telephone numbers
+- **Class imbalance handling** using Random OverSampling
+  
 
 **Data Cleaning / Pre-processing:**
 Addressed class imbalance using RandomOverSampler, applied One-Hot Encoding to categorical features, and scaled numerical data for better model performance.
@@ -80,14 +95,13 @@ Model deployment using Streamlit
 
 <img width="1090" alt="Features_to_consider_before_granting_Loan" src="https://github.com/user-attachments/assets/6a6946fe-5fe1-4018-8a49-9d8d58aac397" />
 
-**Key Loan Factors:**
-Credit Amount, Employment History, and Credit History are the top factors influencing loan approval and default risk.
-**Credit Amount** is crucial because larger loan amounts necessitate more stringent vetting processes to prevent defaults.
-**Credit History** reflects an individual's past loan repayment behavior, making it an essential factor in predicting future default risks.
-**Employment History** plays a significant role in determining an applicant's financial stability and ability to repay the loan.
-These findings align with common lending practices, where higher loan amounts require more thorough assessments, and past behavior (in terms of credit and employment) is used to predict future behavior.
+### Models Compared:
+- K-Nearest Neighbors (K-NN)
+- Decision Trees  
+- Random Forests (best performer)
+- Recursive Feature Elimination with Cross-Validation (RFECV)
 
-**🤝 Contributing**
-Contributions to improve the model or extend the project are highly welcome!
-Whether it’s bug fixes, feature enhancements, dataset expansion, or new model experiments — feel free to fork this repository, create a branch, make your changes, and submit a pull request
-
+### Advanced Techniques:
+- Hyperparameter tuning with GridSearchCV
+- Stratified sampling for better validation
+- Feature importance analysis
