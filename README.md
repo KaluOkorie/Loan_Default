@@ -32,7 +32,7 @@ I also discovered that medium credit amounts have the highest default rates - ch
 - Demographic factors like age and gender show patterns, but must be interpreted carefully to avoid bias
 - Traditional credit assessment might be missing important non-linear relationships in the data
 
-## 📊 What's Inside
+## What's Inside
 
 ### Data Pipeline:
 - **Ethical data handling** with sensitive demographic information
